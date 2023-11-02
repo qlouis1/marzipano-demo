@@ -1,8 +1,8 @@
 var APP_DATA = {
   "scenes": [
     {
-      "id": "0-01_outside_2018_04_30_es_supernova_vt_outside3-cc",
-      "name": "01_outside_2018_04_30_ES_Supernova_VT_Outside3-CC",
+      "id": "01-outside",
+      "name": "01-outside",
       "levels": [
         {
           "tileSize": 256,
@@ -29,7 +29,7 @@ var APP_DATA = {
           "yaw": 0.027520993351838996,
           "pitch": 0.011100218774799941,
           "rotation": 6.283185307179586,
-          "target": "1-02_reception_2018_04_21_es_supernova_vt_reception-cc"
+          "target": "02-reception"
         }
       ],
       "infoHotspots": [
@@ -42,8 +42,8 @@ var APP_DATA = {
       ]
     },
     {
-      "id": "1-02_reception_2018_04_21_es_supernova_vt_reception-cc",
-      "name": "02_reception_2018_04_21_ES_Supernova_VT_Reception-CC",
+      "id": "02-reception",
+      "name": "02-reception",
       "levels": [
         {
           "tileSize": 256,
@@ -70,19 +70,19 @@ var APP_DATA = {
           "yaw": 2.3370201965853212,
           "pitch": 0.06579998974241619,
           "rotation": 0,
-          "target": "0-01_outside_2018_04_30_es_supernova_vt_outside3-cc"
+          "target": "01-outside"
         },
         {
           "yaw": -1.401944445047718,
           "pitch": 0.03735000572677549,
           "rotation": 0,
-          "target": "2-03_floor-1_2018_04_24_es_supernova_vt_exhibition-cc"
+          "target": "03-exhibition"
         },
         {
           "yaw": -1.779546890430126,
           "pitch": 0.09374289887150056,
           "rotation": 4.71238898038469,
-          "target": "4-05_floor-3_2018_04_24_es_supernova_vt_void_bottom-cc"
+          "target": "05-void_bottom"
         }
       ],
       "infoHotspots": [
@@ -95,8 +95,8 @@ var APP_DATA = {
       ]
     },
     {
-      "id": "2-03_floor-1_2018_04_24_es_supernova_vt_exhibition-cc",
-      "name": "03_floor-1_2018_04_24_ES_Supernova_VT_Exhibition-CC",
+      "id": "03-exhibition",
+      "name": "03-exhibition",
       "levels": [
         {
           "tileSize": 256,
@@ -123,19 +123,19 @@ var APP_DATA = {
           "yaw": 1.6535202858823972,
           "pitch": 0.01536278769386712,
           "rotation": 0,
-          "target": "1-02_reception_2018_04_21_es_supernova_vt_reception-cc"
+          "target": "02-reception"
         },
         {
           "yaw": -0.705560814717856,
           "pitch": 0.1905776007053106,
           "rotation": 0,
-          "target": "3-04_floor-2_2018_04_29_es_supernova_vt_exhibition_stars-cc"
+          "target": "04-exhibition_stars"
         },
         {
           "yaw": -0.01868803930004681,
           "pitch": -0.0033763183284527543,
           "rotation": 0,
-          "target": "5-06_level-1_2018_04_21_es_vt_exhibition_old_telescope-cc"
+          "target": "06-exhibition_old_telescope"
         }
       ],
       "infoHotspots": [
@@ -148,8 +148,8 @@ var APP_DATA = {
       ]
     },
     {
-      "id": "3-04_floor-2_2018_04_29_es_supernova_vt_exhibition_stars-cc",
-      "name": "04_floor-2_2018_04_29_ES_Supernova_VT_Exhibition_Stars-CC",
+      "id": "04-exhibition_stars",
+      "name": "04-exhibition_stars",
       "levels": [
         {
           "tileSize": 256,
@@ -176,13 +176,13 @@ var APP_DATA = {
           "yaw": 2.2735839327688447,
           "pitch": 0.06931944226615983,
           "rotation": 0,
-          "target": "2-03_floor-1_2018_04_24_es_supernova_vt_exhibition-cc"
+          "target": "03-exhibition"
         },
         {
           "yaw": -0.17259483231557127,
           "pitch": 0.09348955360104938,
           "rotation": 0,
-          "target": "1-02_reception_2018_04_21_es_supernova_vt_reception-cc"
+          "target": "02-reception"
         }
       ],
       "infoHotspots": [
@@ -195,8 +195,8 @@ var APP_DATA = {
       ]
     },
     {
-      "id": "4-05_floor-3_2018_04_24_es_supernova_vt_void_bottom-cc",
-      "name": "05_floor-3_2018_04_24_ES_Supernova_VT_Void_Bottom-CC",
+      "id": "05-void_bottom",
+      "name": "05-void_bottom",
       "levels": [
         {
           "tileSize": 256,
@@ -223,7 +223,7 @@ var APP_DATA = {
           "yaw": 1.256710858589539,
           "pitch": 0.0935167655801461,
           "rotation": 0,
-          "target": "1-02_reception_2018_04_21_es_supernova_vt_reception-cc"
+          "target": "02-reception"
         }
       ],
       "infoHotspots": [
@@ -236,8 +236,8 @@ var APP_DATA = {
       ]
     },
     {
-      "id": "5-06_level-1_2018_04_21_es_vt_exhibition_old_telescope-cc",
-      "name": "06_level-1_2018_04_21_ES_VT_Exhibition_Old_Telescope-CC",
+      "id": "06-exhibition_old_telescope",
+      "name": "06-exhibition_old_telescope",
       "levels": [
         {
           "tileSize": 256,
@@ -264,13 +264,13 @@ var APP_DATA = {
           "yaw": 0.9160847831027858,
           "pitch": 0.20143863954147534,
           "rotation": 3.141592653589793,
-          "target": "2-03_floor-1_2018_04_24_es_supernova_vt_exhibition-cc"
+          "target": "03-exhibition"
         },
         {
           "yaw": 2.6685367386806336,
           "pitch": 0.09329880710284577,
           "rotation": 0,
-          "target": "6-07_level-2_2018_04_29_es_supernova_vt_exhibition_atacama-cc"
+          "target": "07-exhibition_atacama"
         }
       ],
       "infoHotspots": [
@@ -283,8 +283,8 @@ var APP_DATA = {
       ]
     },
     {
-      "id": "6-07_level-2_2018_04_29_es_supernova_vt_exhibition_atacama-cc",
-      "name": "07_level-2_2018_04_29_ES_Supernova_VT_Exhibition_Atacama-CC",
+      "id": "07-exhibition_atacama",
+      "name": "07-exhibition_atacama",
       "levels": [
         {
           "tileSize": 256,
@@ -311,13 +311,13 @@ var APP_DATA = {
           "yaw": -1.3809718399698951,
           "pitch": 0.05814590459618074,
           "rotation": 0,
-          "target": "5-06_level-1_2018_04_21_es_vt_exhibition_old_telescope-cc"
+          "target": "06-exhibition_old_telescope"
         },
         {
           "yaw": 0.4299293131984143,
           "pitch": 0.03817668730892976,
           "rotation": 0,
-          "target": "7-08_level-3_2018_04_21_es_supernova_vt_void-cc"
+          "target": "08-void"
         }
       ],
       "infoHotspots": [
@@ -330,8 +330,8 @@ var APP_DATA = {
       ]
     },
     {
-      "id": "7-08_level-3_2018_04_21_es_supernova_vt_void-cc",
-      "name": "08_level-3_2018_04_21_ES_Supernova_VT_Void-CC",
+      "id": "08-void",
+      "name": "08-void",
       "levels": [
         {
           "tileSize": 256,
@@ -353,7 +353,14 @@ var APP_DATA = {
         "yaw": 0,
         "fov": 1.5707963267948966
       },
-      "linkHotspots": [],
+      "linkHotspots": [
+        {
+          "yaw": 0.027520993351838996,
+          "pitch": 0.011100218774799941,
+          "rotation": 6.283185307179586,
+          "target": "07-exhibition_atacama"
+        }
+      ],
       "infoHotspots": [
         {
           "yaw": -0.6595419830280207,
