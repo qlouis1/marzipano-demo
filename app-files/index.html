@@ -1,99 +1,85 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Marzipano démo</title>
-<meta charset="utf-8">
-<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" />
-<style> @-ms-viewport { width: device-width; } </style>
-<link rel="stylesheet" href="vendor/reset.min.css">
-<link rel="stylesheet" href="style.css">
+    <title>Marzipano démo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" />
+    <style>
+        @-ms-viewport {
+            width: device-width;
+        }
+    </style>
+    <link rel="stylesheet" href="vendor/reset.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="multiple-scenes view-control-buttons">
 
-<div id="pano"></div>
+    <script src="vendor/screenfull.min.js"></script>
+    <script src="vendor/bowser.min.js"></script>
+    <script src="vendor/marzipano.js"></script>
 
-<div id="sceneList">
-  <ul class="scenes">
-    
-      <a href="javascript:void(0)" class="scene" data-id="0-01_outside_2018_04_30_es_supernova_vt_outside3-cc">
-        <li class="text">01_outside_2018_04_30_ES_Supernova_VT_Outside3-CC</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="1-02_reception_2018_04_21_es_supernova_vt_reception-cc">
-        <li class="text">02_reception_2018_04_21_ES_Supernova_VT_Reception-CC</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="2-03_floor-1_2018_04_24_es_supernova_vt_exhibition-cc">
-        <li class="text">03_floor-1_2018_04_24_ES_Supernova_VT_Exhibition-CC</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="3-04_floor-2_2018_04_29_es_supernova_vt_exhibition_stars-cc">
-        <li class="text">04_floor-2_2018_04_29_ES_Supernova_VT_Exhibition_Stars-CC</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="4-05_floor-3_2018_04_24_es_supernova_vt_void_bottom-cc">
-        <li class="text">05_floor-3_2018_04_24_ES_Supernova_VT_Void_Bottom-CC</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="5-06_level-1_2018_04_21_es_vt_exhibition_old_telescope-cc">
-        <li class="text">06_level-1_2018_04_21_ES_VT_Exhibition_Old_Telescope-CC</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="6-07_level-2_2018_04_29_es_supernova_vt_exhibition_atacama-cc">
-        <li class="text">07_level-2_2018_04_29_ES_Supernova_VT_Exhibition_Atacama-CC</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="7-08_level-3_2018_04_21_es_supernova_vt_void-cc">
-        <li class="text">08_level-3_2018_04_21_ES_Supernova_VT_Void-CC</li>
-      </a>
-    
-  </ul>
-</div>
+    <script src="data.js"></script>
 
-<div id="titleBar">
-  <h1 class="sceneName"></h1>
-</div>
+    <div id="pano"></div>
 
-<a href="javascript:void(0)" id="autorotateToggle">
-  <img class="icon off" src="img/play.png">
-  <img class="icon on" src="img/pause.png">
-</a>
+    <div id="sceneList">
+    </div>
 
-<a href="javascript:void(0)" id="fullscreenToggle">
-  <img class="icon off" src="img/fullscreen.png">
-  <img class="icon on" src="img/windowed.png">
-</a>
+    <script>
+        var p = "";
+        p += '<ul class="scenes">';
+        var data = window.APP_DATA;
+        var link = '<a href="javascript:void(0)" class="scene" data-id="%s"><li class="text">%s</li>';
+        data.scenes.forEach(element => {
+            p += link.replace(/%s/g,element.id);
+        });
+        p += '</ul>';
 
-<a href="javascript:void(0)" id="sceneListToggle">
-  <img class="icon off" src="img/expand.png">
-  <img class="icon on" src="img/collapse.png">
-</a>
+        document.getElementById("sceneList").innerHTML = p;
+    </script>
 
-<a href="javascript:void(0)" id="viewUp" class="viewControlButton viewControlButton-1">
-  <img class="icon" src="img/up.png">
-</a>
-<a href="javascript:void(0)" id="viewDown" class="viewControlButton viewControlButton-2">
-  <img class="icon" src="img/down.png">
-</a>
-<a href="javascript:void(0)" id="viewLeft" class="viewControlButton viewControlButton-3">
-  <img class="icon" src="img/left.png">
-</a>
-<a href="javascript:void(0)" id="viewRight" class="viewControlButton viewControlButton-4">
-  <img class="icon" src="img/right.png">
-</a>
-<a href="javascript:void(0)" id="viewIn" class="viewControlButton viewControlButton-5">
-  <img class="icon" src="img/plus.png">
-</a>
-<a href="javascript:void(0)" id="viewOut" class="viewControlButton viewControlButton-6">
-  <img class="icon" src="img/minus.png">
-</a>
+    <div id="titleBar">
+        <h1 class="sceneName"></h1>
+    </div>
 
-<script src="vendor/screenfull.min.js" ></script>
-<script src="vendor/bowser.min.js" ></script>
-<script src="vendor/marzipano.js" ></script>
+    <a href="javascript:void(0)" id="autorotateToggle">
+        <img class="icon off" src="img/play.png">
+        <img class="icon on" src="img/pause.png">
+    </a>
 
-<script src="data.js"></script>
-<script src="index.js"></script>
+    <a href="javascript:void(0)" id="fullscreenToggle">
+        <img class="icon off" src="img/fullscreen.png">
+        <img class="icon on" src="img/windowed.png">
+    </a>
+
+    <a href="javascript:void(0)" id="sceneListToggle">
+        <img class="icon off" src="img/expand.png">
+        <img class="icon on" src="img/collapse.png">
+    </a>
+
+    <a href="javascript:void(0)" id="viewUp" class="viewControlButton viewControlButton-1">
+        <img class="icon" src="img/up.png">
+    </a>
+    <a href="javascript:void(0)" id="viewDown" class="viewControlButton viewControlButton-2">
+        <img class="icon" src="img/down.png">
+    </a>
+    <a href="javascript:void(0)" id="viewLeft" class="viewControlButton viewControlButton-3">
+        <img class="icon" src="img/left.png">
+    </a>
+    <a href="javascript:void(0)" id="viewRight" class="viewControlButton viewControlButton-4">
+        <img class="icon" src="img/right.png">
+    </a>
+    <a href="javascript:void(0)" id="viewIn" class="viewControlButton viewControlButton-5">
+        <img class="icon" src="img/plus.png">
+    </a>
+    <a href="javascript:void(0)" id="viewOut" class="viewControlButton viewControlButton-6">
+        <img class="icon" src="img/minus.png">
+    </a>
+
+    <script src="index.js"></script>
 
 </body>
+
 </html>
