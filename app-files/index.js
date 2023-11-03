@@ -90,15 +90,6 @@
       geometry: geometry
     });
 
-    var mire = Marzipano.ImageUrlSource.fromString(
-      urlPrefix + ":" + "0-mire" + "/{z}/{f}/{y}/{x}.jpg",
-      { cubeMapPreviewUrl: urlPrefix + "/" + "0-mire" + "/preview.jpg" });
-
-    scene.createLayer({
-      source: mire,
-      geometry: geometry
-    })
-
     // Create link hotspots.
     data.linkHotspots.forEach(function (hotspot) {
       var element = createLinkHotspotElement(hotspot);
@@ -194,14 +185,33 @@
   }
 
   function switchScene(scene) {
+    // destroy mire if needed
+    if (scene.scene.listLayers()[1]) {
+      scene.scene.destroyLayer(scene.scene.listLayers()[1]);
+    }
     stopAutorotate();
     scene.view.setParameters(scene.data.initialViewParameters);
-    scene.scene.switchTo();
+    scene.scene.switchTo({}, function () { addMire(scene.scene); });
     startAutorotate();
     updateSceneName(scene);
     updateSceneList(scene);
   }
 
+  // add mire to scene
+  function addMire(scene) {
+    if (!scene.listLayers()[1]) {
+      var mire = Marzipano.ImageUrlSource.fromString(
+        "tiles" + ":" + "0-mire" + "/{z}/{f}/{y}/{x}.jpg",
+        { cubeMapPreviewUrl: "tiles" + "/" + "0-mire" + "/preview.jpg" });
+
+      var geometry = scene.listLayers()[0].geometry();
+      scene.createLayer({
+        source: mire,
+        geometry: geometry,
+        layerOpts: { effects: { opacity: 0.25 } }
+      });
+    }
+  };
   function updateSceneName(scene) {
     sceneNameElement.innerHTML = sanitize(scene.data.name);
   }
