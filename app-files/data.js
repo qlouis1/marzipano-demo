@@ -371,6 +371,34 @@ var APP_DATA = {
       ]
     }
   ],
+  "mire":
+  {
+    "id": "0-mire",
+    "name": "0-mire",
+    "levels": [
+      {
+        "tileSize": 256,
+        "size": 256,
+        "fallbackOnly": true
+      },
+      {
+        "tileSize": 512,
+        "size": 512
+      },
+      {
+        "tileSize": 512,
+        "size": 1024
+      }
+    ],
+    "faceSize": 512,
+    "initialViewParameters": {
+      "yaw": 0,
+      "pitch": 0,
+      "fov": 1.438812555604352
+    },
+    "linkHotspots": [],
+    "infoHotspots": []
+  },
   "name": "Marzipano démo",
   "settings": {
     "mouseViewMode": "drag",

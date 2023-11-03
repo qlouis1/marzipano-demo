@@ -81,12 +81,23 @@
     var limiter = Marzipano.RectilinearView.limit.traditional(data.faceSize, 100*Math.PI/180, 120*Math.PI/180);
     var view = new Marzipano.RectilinearView(data.initialViewParameters, limiter);
 
-    var scene = viewer.createScene({
-      source: source,
-      geometry: geometry,
-      view: view,
-      pinFirstLevel: true
+    var scene = viewer.createEmptyScene({
+      view: view
     });
+
+    scene.createLayer({
+      source: source,
+      geometry: geometry
+    });
+
+    var mire = Marzipano.ImageUrlSource.fromString(
+      urlPrefix + ":" + "0-mire" + "/{z}/{f}/{y}/{x}.jpg",
+      { cubeMapPreviewUrl: urlPrefix + "/" + "0-mire" + "/preview.jpg" });
+
+    scene.createLayer({
+      source: mire,
+      geometry: geometry
+    })
 
     // Create link hotspots.
     data.linkHotspots.forEach(function(hotspot) {
