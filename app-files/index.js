@@ -102,6 +102,12 @@
       scene.hotspotContainer().createHotspot(element, { yaw: hotspot.yaw, pitch: hotspot.pitch });
     });
 
+    // Create iframe hotspots.
+    data.iframeHotspots.forEach(function (hotspot) {
+      var element = createIframeHotspotElement(hotspot);
+      scene.hotspotContainer().createHotspot(element, { yaw: hotspot.yaw, pitch: hotspot.pitch }, { perspective: { radius: 1640, extraTransforms: "rotateX(5deg)" } });
+    });
+
     return {
       data: data,
       scene: scene,
@@ -375,6 +381,23 @@
     // This prevents the view control logic from interfering with the hotspot.
     stopTouchAndScrollEventPropagation(wrapper);
 
+    return wrapper;
+  }
+
+  function createIframeHotspotElement(hotspot) {
+    var wrapper = document.createElement('div');
+    wrapper.classList.add('hotspot');
+    wrapper.classList.add('iframe-hotspot');
+
+    var iframe = document.createElement('iframe');
+    iframe.id = hotspot.title;
+    iframe.src = hotspot.src;
+    iframe.width = hotspot.width;
+    iframe.height = hotspot.height;
+    iframe.frameborder = "0";
+    iframe.style = "border:0";
+
+    wrapper.appendChild(iframe);
     return wrapper;
   }
 

@@ -34,10 +34,20 @@ var APP_DATA = {
       ],
       "infoHotspots": [
         {
-          "yaw": 0.3374331182328394,
-          "pitch": 0.010476348018610082,
+          "yaw": -45*Math.PI/180,
+          "pitch": 0,
           "title": "01_outside_hotspot<br>",
           "text": "01_outside_hotspot"
+        }
+      ],
+      "iframeHotspots": [
+        {
+          "yaw": 45*Math.PI/180,
+          "pitch": 0,
+          "title": "GMAPS",
+          "src": 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9487.563699358636!2d-9.211273541013671!3d38.69789785451112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1ecf578f4d20e9%3A0x530952e38d140ae6!2sDigisfera+-+Fotografia+e+Inform%C3%A1tica%2C+Lda!5e1!3m2!1spt-PT!2spt!4v1429956174252',
+          "width": 1280,
+          "height": 480
         }
       ]
     },
@@ -92,7 +102,8 @@ var APP_DATA = {
           "title": "02_reception_hotspot",
           "text": "<div>02_reception_hotspot</div>"
         }
-      ]
+      ],
+      "iframeHotspots": []
     },
     {
       "id": "03-exhibition",
@@ -145,7 +156,8 @@ var APP_DATA = {
           "title": "03_floor-1_hotspot",
           "text": "03_floor-1_hotspot"
         }
-      ]
+      ],
+      "iframeHotspots": []
     },
     {
       "id": "04-exhibition_stars",
@@ -192,7 +204,8 @@ var APP_DATA = {
           "title": "04_floor-2_hotspot",
           "text": "04_floor-2_hotspot"
         }
-      ]
+      ],
+      "iframeHotspots": []
     },
     {
       "id": "05-void_bottom",
@@ -233,7 +246,8 @@ var APP_DATA = {
           "title": "05_floor-3_hotspot",
           "text": "<div>05_floor-3_hotspot</div>"
         }
-      ]
+      ],
+      "iframeHotspots": []
     },
     {
       "id": "06-exhibition_old_telescope",
@@ -280,7 +294,8 @@ var APP_DATA = {
           "title": "06_level-1_hotspot",
           "text": "<div>06_level-1_hotspot</div>"
         }
-      ]
+      ],
+      "iframeHotspots": []
     },
     {
       "id": "07-exhibition_atacama",
@@ -327,7 +342,8 @@ var APP_DATA = {
           "title": "07_level-2_hotspot",
           "text": "07_level-2_hotspot"
         }
-      ]
+      ],
+      "iframeHotspots": []
     },
     {
       "id": "08-void",
@@ -368,7 +384,8 @@ var APP_DATA = {
           "title": "08_level-3_hotspot",
           "text": "08_level-3_hotspot"
         }
-      ]
+      ],
+      "iframeHotspots": []
     }
   ],
   "mire":
@@ -397,7 +414,8 @@ var APP_DATA = {
       "fov": 1.438812555604352
     },
     "linkHotspots": [],
-    "infoHotspots": []
+    "infoHotspots": [],
+    "iframeHotspots": []
   },
   "name": "Marzipano démo",
   "settings": {
