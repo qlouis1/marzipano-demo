@@ -49,6 +49,18 @@ var APP_DATA = {
           "width": 1280,
           "height": 480
         }
+      ],
+      "imageHotspots": [
+        {
+          "type": "ImageHotspot",
+          "yaw": -50*Math.PI/180,
+          "pitch": -8*Math.PI/180,
+          "title": "GMAPS",
+          "src": './data/kanb.png',
+          "width": 250,
+          "height": 250,
+          "a": "https://ent.univ-rennes1.fr/"
+        }
       ]
     },
     {
@@ -103,7 +115,9 @@ var APP_DATA = {
           "text": "<div>02_reception_hotspot</div>"
         }
       ],
-      "iframeHotspots": []
+      "iframeHotspots": [],
+      "imageHotspots": [],
+      "imageHotspots": []
     },
     {
       "id": "03-exhibition",
@@ -157,7 +171,8 @@ var APP_DATA = {
           "text": "03_floor-1_hotspot"
         }
       ],
-      "iframeHotspots": []
+      "iframeHotspots": [],
+      "imageHotspots": []
     },
     {
       "id": "04-exhibition_stars",
@@ -205,7 +220,8 @@ var APP_DATA = {
           "text": "04_floor-2_hotspot"
         }
       ],
-      "iframeHotspots": []
+      "iframeHotspots": [],
+      "imageHotspots": []
     },
     {
       "id": "05-void_bottom",
@@ -247,7 +263,8 @@ var APP_DATA = {
           "text": "<div>05_floor-3_hotspot</div>"
         }
       ],
-      "iframeHotspots": []
+      "iframeHotspots": [],
+      "imageHotspots": []
     },
     {
       "id": "06-exhibition_old_telescope",
@@ -295,7 +312,8 @@ var APP_DATA = {
           "text": "<div>06_level-1_hotspot</div>"
         }
       ],
-      "iframeHotspots": []
+      "iframeHotspots": [],
+      "imageHotspots": []
     },
     {
       "id": "07-exhibition_atacama",
@@ -343,7 +361,8 @@ var APP_DATA = {
           "text": "07_level-2_hotspot"
         }
       ],
-      "iframeHotspots": []
+      "iframeHotspots": [],
+      "imageHotspots": []
     },
     {
       "id": "08-void",
@@ -371,8 +390,8 @@ var APP_DATA = {
       },
       "linkHotspots": [
         {
-          "yaw": 0.027520993351838996,
-          "pitch": 0.011100218774799941,
+          "yaw": 120*Math.PI/180,
+          "pitch": 5*Math.PI/180,
           "rotation": 6.283185307179586,
           "target": "07-exhibition_atacama"
         }
@@ -385,7 +404,27 @@ var APP_DATA = {
           "text": "08_level-3_hotspot"
         }
       ],
-      "iframeHotspots": []
+      "iframeHotspots": [],
+      "imageHotspots": [
+        {
+          "type": "ImageHotspot",
+          "yaw": 120*Math.PI/180,
+          "pitch": 5*Math.PI/180,
+          "title": "FRAME",
+          "src": './data/frame.png',
+          "width": 12000,
+          "height": 7500
+        },
+        {
+          "type": "ImageHotspot",
+          "yaw": -90*Math.PI/180,
+          "pitch": -0*Math.PI/180,
+          "title": "KANB",
+          "src": './data/kanb.png',
+          "width": 1200,
+          "height": 750
+        }
+      ]
     }
   ],
   "mire":
@@ -415,7 +454,8 @@ var APP_DATA = {
     },
     "linkHotspots": [],
     "infoHotspots": [],
-    "iframeHotspots": []
+    "iframeHotspots": [],
+      "imageHotspots": []
   },
   "name": "Marzipano démo",
   "settings": {
