@@ -34,7 +34,7 @@ var APP_DATA = {
       ],
       "infoHotspots": [
         {
-          "yaw": -45*Math.PI/180,
+          "yaw": -45 * Math.PI / 180,
           "pitch": 0,
           "title": "01_outside_hotspot<br>",
           "text": "01_outside_hotspot"
@@ -42,19 +42,20 @@ var APP_DATA = {
       ],
       "iframeHotspots": [
         {
-          "yaw": 45*Math.PI/180,
+          "yaw": 45 * Math.PI / 180,
           "pitch": 0,
           "title": "GMAPS",
           "src": 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9487.563699358636!2d-9.211273541013671!3d38.69789785451112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1ecf578f4d20e9%3A0x530952e38d140ae6!2sDigisfera+-+Fotografia+e+Inform%C3%A1tica%2C+Lda!5e1!3m2!1spt-PT!2spt!4v1429956174252',
           "width": 1280,
-          "height": 480
+          "height": 480,
+          "opts": { perspective: { radius: 1640, extraTransforms: "rotateX(5deg)" } }
         }
       ],
       "imageHotspots": [
         {
           "type": "ImageHotspot",
-          "yaw": -50*Math.PI/180,
-          "pitch": -8*Math.PI/180,
+          "yaw": -50 * Math.PI / 180,
+          "pitch": -8 * Math.PI / 180,
           "title": "GMAPS",
           "src": './data/kanb.png',
           "width": 250,
@@ -105,6 +106,12 @@ var APP_DATA = {
           "pitch": 0.09374289887150056,
           "rotation": 4.71238898038469,
           "target": "05-void_bottom"
+        },
+        {
+          "yaw": -11 * Math.PI / 180,
+          "pitch": 3 * Math.PI / 180,
+          "rotation": 0,
+          "target": "09-seminar"
         }
       ],
       "infoHotspots": [
@@ -390,8 +397,8 @@ var APP_DATA = {
       },
       "linkHotspots": [
         {
-          "yaw": 120*Math.PI/180,
-          "pitch": 5*Math.PI/180,
+          "yaw": 120 * Math.PI / 180,
+          "pitch": 5 * Math.PI / 180,
           "rotation": 6.283185307179586,
           "target": "07-exhibition_atacama"
         }
@@ -408,8 +415,8 @@ var APP_DATA = {
       "imageHotspots": [
         {
           "type": "ImageHotspot",
-          "yaw": 120*Math.PI/180,
-          "pitch": 5*Math.PI/180,
+          "yaw": 120 * Math.PI / 180,
+          "pitch": 5 * Math.PI / 180,
           "title": "FRAME",
           "src": './data/frame.png',
           "width": 12000,
@@ -417,8 +424,65 @@ var APP_DATA = {
         },
         {
           "type": "ImageHotspot",
-          "yaw": -90*Math.PI/180,
-          "pitch": -0*Math.PI/180,
+          "yaw": -90 * Math.PI / 180,
+          "pitch": -0 * Math.PI / 180,
+          "title": "KANB",
+          "src": './data/kanb.png',
+          "width": 1200,
+          "height": 750
+        }
+      ]
+    },
+    {
+      "id": "09-seminar",
+      "name": "09-seminar",
+      "levels": [
+        {
+          "tileSize": 256,
+          "size": 256,
+          "fallbackOnly": true
+        },
+        {
+          "tileSize": 512,
+          "size": 512
+        },
+        {
+          "tileSize": 512,
+          "size": 1024
+        }
+      ],
+      "faceSize": 1000,
+      "initialViewParameters": {
+        "pitch": 0,
+        "yaw": 0,
+        "fov": 1.5707963267948966
+      },
+      "linkHotspots": [
+        {
+          "yaw": -115 * Math.PI / 180,
+          "pitch": 0 * Math.PI / 180,
+          "rotation": 0,
+          "target": "02-reception"
+        }
+      ],
+      "infoHotspots": [
+      ],
+      "iframeHotspots": [
+        {
+          "yaw": 70 * Math.PI / 180,
+          "pitch": 0 * Math.PI / 180,
+          "title": "GMAPS",
+          "src": 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9487.563699358636!2d-9.211273541013671!3d38.69789785451112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1ecf578f4d20e9%3A0x530952e38d140ae6!2sDigisfera+-+Fotografia+e+Inform%C3%A1tica%2C+Lda!5e1!3m2!1spt-PT!2spt!4v1429956174252',
+          "width": 1280,
+          "height": 480,
+          "opts": { perspective: { radius: 1640, extraTransforms: "rotateY(-45deg) translateY(70px)" } }
+        }
+      ],
+      "imageHotspots": [
+        {
+          "type": "ImageHotspot",
+          "yaw": -90 * Math.PI / 180,
+          "pitch": -0 * Math.PI / 180,
           "title": "KANB",
           "src": './data/kanb.png',
           "width": 1200,
@@ -455,7 +519,7 @@ var APP_DATA = {
     "linkHotspots": [],
     "infoHotspots": [],
     "iframeHotspots": [],
-      "imageHotspots": []
+    "imageHotspots": []
   },
   "name": "Marzipano démo",
   "settings": {

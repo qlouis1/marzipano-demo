@@ -105,7 +105,12 @@
     // Create iframe hotspots.
     data.iframeHotspots.forEach(function (hotspot) {
       var element = createIframeHotspotElement(hotspot);
-      scene.hotspotContainer().createHotspot(element, { yaw: hotspot.yaw, pitch: hotspot.pitch }, { perspective: { radius: 1640, extraTransforms: "rotateX(5deg)" } });
+      var opts = {};
+      if (hotspot.opts) {
+        opts = hotspot.opts;
+        console.log(opts);
+      }
+      scene.hotspotContainer().createHotspot(element, { yaw: hotspot.yaw, pitch: hotspot.pitch }, opts);
     });
 
     // Create image hotspots.
@@ -121,6 +126,7 @@
     };
   });
 
+  // Set up other menu
   // Set up autorotate, if enabled.
   var autorotate = Marzipano.autorotate({
     yawSpeed: 0.03,
@@ -423,7 +429,7 @@
     if (hotspot.a) {
       var a = document.createElement('a');
       a.href = hotspot.a;
-      a.target="_blank";
+      a.target = "_blank";
       a.appendChild(img);
       wrapper.appendChild(a);
     } else {
