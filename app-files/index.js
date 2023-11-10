@@ -108,6 +108,12 @@
       scene.hotspotContainer().createHotspot(element, { yaw: hotspot.yaw, pitch: hotspot.pitch }, { perspective: { radius: 1640, extraTransforms: "rotateX(5deg)" } });
     });
 
+    // Create image hotspots.
+    data.imageHotspots.forEach(function (hotspot) {
+      var element = createImageHotspotElement(hotspot);
+      scene.hotspotContainer().createHotspot(element, { yaw: hotspot.yaw, pitch: hotspot.pitch }, { perspective: { radius: 5000 } });
+    });
+
     return {
       data: data,
       scene: scene,
@@ -205,7 +211,7 @@
 
   // add mire to scene
   function addMire(scene) {
-    if (!scene.listLayers()[1]) {
+    if (!scene.listLayers()[1] && true) {
       var mire = Marzipano.ImageUrlSource.fromString(
         "tiles" + ":" + "0-mire" + "/{z}/{f}/{y}/{x}.jpg",
         { cubeMapPreviewUrl: "tiles" + "/" + "0-mire" + "/preview.jpg" });
@@ -401,6 +407,23 @@
     return wrapper;
   }
 
+  function createImageHotspotElement(hotspot) {
+    var wrapper = document.createElement('div');
+    wrapper.classList.add('hotspot');
+    wrapper.classList.add('image-hotspot');
+
+    var img = document.createElement('img');
+    img.id = hotspot.title;
+    img.src = hotspot.src;
+    img.width = hotspot.width;
+    img.height = hotspot.height;
+    img.frameborder = "0";
+    img.style = "border:0";
+
+    wrapper.appendChild(img);
+    return wrapper;
+  }
+
   // Prevent touch and scroll events from reaching the parent element.
   function stopTouchAndScrollEventPropagation(element, eventList) {
     var eventList = ['touchstart', 'touchmove', 'touchend', 'touchcancel',
@@ -429,6 +452,9 @@
     }
     return null;
   }
+
+
+
 
   // Display the initial scene.
   switchScene(scenes[0]);
