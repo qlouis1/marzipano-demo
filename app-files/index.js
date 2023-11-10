@@ -211,7 +211,7 @@
 
   // add mire to scene
   function addMire(scene) {
-    if (!scene.listLayers()[1] && true) {
+    if (!scene.listLayers()[1] && false) {
       var mire = Marzipano.ImageUrlSource.fromString(
         "tiles" + ":" + "0-mire" + "/{z}/{f}/{y}/{x}.jpg",
         { cubeMapPreviewUrl: "tiles" + "/" + "0-mire" + "/preview.jpg" });
@@ -420,7 +420,15 @@
     img.frameborder = "0";
     img.style = "border:0";
 
-    wrapper.appendChild(img);
+    if (hotspot.a) {
+      var a = document.createElement('a');
+      a.href = hotspot.a;
+      a.target="_blank";
+      a.appendChild(img);
+      wrapper.appendChild(a);
+    } else {
+      wrapper.appendChild(img);
+    }
     return wrapper;
   }
 
