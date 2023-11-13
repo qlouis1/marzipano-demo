@@ -76,7 +76,7 @@ var APP_DATA = {
           "pitch": 10 * Math.PI / 180,
           "width": 500,
           "height": 500,
-          "content": "<div style=\"background-color: lightblue; color: black; font-size: 400%\"><h1> HTML pur</h1><p> hotspot en html pur défini dans le code js.</p></div>",
+          "content": "<div><h1> HTML pur</h1><ul><li> hotspot en html pur</li><li>défini dans le code js</li><li>style dans un .css</li></ul></p></div>",
           "opts": { perspective: { radius: 1200 } }
         }
       ]

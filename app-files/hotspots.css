@@ -1,0 +1,15 @@
+.html-hotspot {
+    background-color: lightblue;
+    border-radius: 20px;
+    padding: 20px;
+    color: black;
+  }
+  
+  .html-hotspot h1 {
+    font-size: 4em;
+  }
+  
+  .html-hotspot p,
+  .html-hotspot ul {
+    font-size: 3em;
+  }
