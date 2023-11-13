@@ -59,6 +59,25 @@ var APP_DATA = {
           "height": 250,
           "a": "https://ent.univ-rennes1.fr/",
           "opts": { perspective: { radius: 5000 } }
+        },
+        {
+          "type": "image",
+          "yaw": 180 * Math.PI / 180,
+          "pitch": -10 * Math.PI / 180,
+          "title": "GMAPS",
+          "src": './data/kanb.png',
+          "width": 250,
+          "height": 250,
+          "opts": { perspective: { radius: 1200 } }
+        },
+        {
+          "type": "html",
+          "yaw": 180 * Math.PI / 180,
+          "pitch": 10 * Math.PI / 180,
+          "width": 500,
+          "height": 500,
+          "content": "<div style=\"background-color: lightblue; color: black; font-size: 400%\"><h1> HTML pur</h1><p> hotspot en html pur défini dans le code js.</p></div>",
+          "opts": { perspective: { radius: 1200 } }
         }
       ]
     },
