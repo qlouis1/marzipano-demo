@@ -74,7 +74,7 @@ var APP_DATA = {
           "height": 10,
           "class": "font-size-3",
           "content": "<div><h1>Navigation</h1></div>",
-          "opts": { perspective: { extraTransforms: "translateY(-65px)" } }
+          "opts": { perspective: { extraTransforms: "translateX(-65px) translateY(-65px)" } }
         },
         {
           "type": "link",
@@ -91,7 +91,7 @@ var APP_DATA = {
           "height": 10,
           "class": "font-size-3",
           "content": "<div><h1>Navigation</h1></div>",
-          "opts": { perspective: { extraTransforms: "translateY(-65px)" } }
+          "opts": { perspective: { extraTransforms: "translateX(-65px) translateY(-65px)" } }
         },
         {
           "type": "info",
