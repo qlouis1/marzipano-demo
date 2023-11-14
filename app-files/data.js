@@ -558,6 +558,7 @@ var APP_DATA = {
   {
     "id": "0-mire",
     "name": "0-mire",
+    "display": false,
     "levels": [
       {
         "tileSize": 256,
@@ -578,12 +579,7 @@ var APP_DATA = {
       "yaw": 0,
       "pitch": 0,
       "fov": 1.438812555604352
-    },
-    "hotspots": [],
-    "linkHotspots": [],
-    "infoHotspots": [],
-    "iframeHotspots": [],
-    "imageHotspots": []
+    }
   },
   "name": "Marzipano démo",
   "settings": {

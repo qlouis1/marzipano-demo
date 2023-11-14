@@ -361,7 +361,7 @@
 
   // add mire to scene
   function addMire(scene) {
-    if (!scene.listLayers()[1] && false) {
+    if (!scene.listLayers()[1] && data.mire.display) {
       var mire = Marzipano.ImageUrlSource.fromString(
         "tiles" + ":" + "0-mire" + "/{z}/{f}/{y}/{x}.jpg",
         { cubeMapPreviewUrl: "tiles" + "/" + "0-mire" + "/preview.jpg" });
