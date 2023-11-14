@@ -2,7 +2,7 @@ var APP_DATA = {
   "scenes": [
     {
       "id": "01-outside",
-      "name": "01-outside",
+      "name": "Entrée",
       "levels": [
         {
           "tileSize": 256,
@@ -31,60 +31,12 @@ var APP_DATA = {
           "pitch": 0.011100218774799941,
           "rotation": 6.283185307179586,
           "target": "02-reception"
-        },
-        {
-          "type": "info",
-          "yaw": -45 * Math.PI / 180,
-          "pitch": 0,
-          "title": "01_outside_hotspot<br>",
-          "text": "01_outside_hotspot"
-        },
-        {
-          "type": "iframe",
-          "yaw": 45 * Math.PI / 180,
-          "pitch": 0,
-          "title": "GMAPS",
-          "src": 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9487.563699358636!2d-9.211273541013671!3d38.69789785451112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1ecf578f4d20e9%3A0x530952e38d140ae6!2sDigisfera+-+Fotografia+e+Inform%C3%A1tica%2C+Lda!5e1!3m2!1spt-PT!2spt!4v1429956174252',
-          "width": 1280,
-          "height": 480,
-          "opts": { perspective: { radius: 1640, extraTransforms: "rotateX(5deg)" } }
-        },
-        {
-          "type": "image",
-          "yaw": -50 * Math.PI / 180,
-          "pitch": -8 * Math.PI / 180,
-          "title": "GMAPS",
-          "src": './data/kanb.png',
-          "width": 250,
-          "height": 250,
-          "a": "https://ent.univ-rennes1.fr/",
-          "opts": { perspective: { radius: 5000 } }
-        },
-        {
-          "type": "image",
-          "yaw": 180 * Math.PI / 180,
-          "pitch": -10 * Math.PI / 180,
-          "title": "GMAPS",
-          "src": './data/kanb.png',
-          "width": 250,
-          "height": 250,
-          "opts": { perspective: { radius: 1200 } }
-        },
-        {
-          "type": "html",
-          "yaw": 180 * Math.PI / 180,
-          "pitch": 10 * Math.PI / 180,
-          "width": 500,
-          "height": 500,
-          "class": "lightblue",
-          "content": "<div><h1> HTML pur</h1><ul><li> hotspot en html pur</li><li>défini dans le code js</li><li>style dans un .css</li></ul></p></div>",
-          "opts": { perspective: { radius: 1200 } }
         }
       ]
     },
     {
       "id": "02-reception",
-      "name": "02-reception",
+      "name": "Réception",
       "levels": [
         {
           "tileSize": 256,
@@ -174,7 +126,7 @@ var APP_DATA = {
           "pitch": -15 * Math.PI / 180,
           "width": 10,
           "height": 10,
-          "content": "<div><h1> App externe</h1></div>",
+          "content": "<div><h1>App externe (iframe)</h1></div>",
           "class": "font-size-7",
           "opts": { perspective: { radius: 1640, extraTransforms: "translateY(-850px) translateX(-850px)" } }
         },
@@ -199,11 +151,21 @@ var APP_DATA = {
           "class": "font-size-7",
           "opts": { perspective: { radius: 1640, extraTransforms: "rotateZ(6deg) translateY(-200px) translateX(-250px)" } }
         },
+        {
+          "type": "html",
+          "yaw": 35 * Math.PI / 180,
+          "pitch": 0 * Math.PI / 180,
+          "width": 500,
+          "height": 500,
+          "class": "lightblue",
+          "content": "<div><p style=\"font-weight: bolder\">Hotspot en html simple avec un style en css externe. De manière générale tout est customisable avec un peu de code.</p></div>",
+          "opts": { perspective: { radius: 1640 } }
+        }
       ]
     },
     {
       "id": "03-exhibition",
-      "name": "03-exhibition",
+      "name": "Musée: rez de chaussée 1",
       "levels": [
         {
           "tileSize": 256,
@@ -258,7 +220,7 @@ var APP_DATA = {
     },
     {
       "id": "04-exhibition_stars",
-      "name": "04-exhibition_stars",
+      "name": "Musée: rez de chaussée 2",
       "levels": [
         {
           "tileSize": 256,
@@ -305,49 +267,8 @@ var APP_DATA = {
       ],
     },
     {
-      "id": "05-void_bottom",
-      "name": "05-void_bottom",
-      "levels": [
-        {
-          "tileSize": 256,
-          "size": 256,
-          "fallbackOnly": true
-        },
-        {
-          "tileSize": 512,
-          "size": 512
-        },
-        {
-          "tileSize": 512,
-          "size": 1024
-        }
-      ],
-      "faceSize": 1000,
-      "initialViewParameters": {
-        "pitch": 0,
-        "yaw": 0,
-        "fov": 1.5707963267948966
-      },
-      "hotspots": [
-        {
-          "type": "link",
-          "yaw": 1.256710858589539,
-          "pitch": 0.0935167655801461,
-          "rotation": 0,
-          "target": "02-reception"
-        },
-        {
-          "type": "info",
-          "yaw": -0.10179365795294615,
-          "pitch": -0.030917260880336528,
-          "title": "05_floor-3_hotspot",
-          "text": "<div>05_floor-3_hotspot</div>"
-        }
-      ]
-    },
-    {
       "id": "06-exhibition_old_telescope",
-      "name": "06-exhibition_old_telescope",
+      "name": "Musée: étage 1",
       "levels": [
         {
           "tileSize": 256,
@@ -395,7 +316,7 @@ var APP_DATA = {
     },
     {
       "id": "07-exhibition_atacama",
-      "name": "07-exhibition_atacama",
+      "name": "Musée: étage 2",
       "levels": [
         {
           "tileSize": 256,
@@ -443,7 +364,7 @@ var APP_DATA = {
     },
     {
       "id": "08-void",
-      "name": "08-void",
+      "name": "\"Void\"",
       "levels": [
         {
           "tileSize": 256,
@@ -479,77 +400,6 @@ var APP_DATA = {
           "pitch": -0.9928675290048403,
           "title": "08_level-3_hotspot",
           "text": "08_level-3_hotspot"
-        },
-        {
-          "type": "image",
-          "yaw": 120 * Math.PI / 180,
-          "pitch": 5 * Math.PI / 180,
-          "title": "FRAME",
-          "src": './data/frame.png',
-          "width": 12000,
-          "height": 7500
-        },
-        {
-          "type": "image",
-          "yaw": -90 * Math.PI / 180,
-          "pitch": -0 * Math.PI / 180,
-          "title": "KANB",
-          "src": './data/kanb.png',
-          "width": 1200,
-          "height": 750
-        }
-      ]
-    },
-    {
-      "id": "09-seminar",
-      "name": "09-seminar",
-      "levels": [
-        {
-          "tileSize": 256,
-          "size": 256,
-          "fallbackOnly": true
-        },
-        {
-          "tileSize": 512,
-          "size": 512
-        },
-        {
-          "tileSize": 512,
-          "size": 1024
-        }
-      ],
-      "faceSize": 1000,
-      "initialViewParameters": {
-        "pitch": 0,
-        "yaw": 0,
-        "fov": 1.5707963267948966
-      },
-      "hotspots": [
-        {
-          "type": "link",
-          "yaw": -115 * Math.PI / 180,
-          "pitch": 0 * Math.PI / 180,
-          "rotation": 0,
-          "target": "02-reception"
-        },
-        {
-          "type": "iframe",
-          "yaw": 70 * Math.PI / 180,
-          "pitch": 0 * Math.PI / 180,
-          "title": "GMAPS",
-          "src": 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9487.563699358636!2d-9.211273541013671!3d38.69789785451112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1ecf578f4d20e9%3A0x530952e38d140ae6!2sDigisfera+-+Fotografia+e+Inform%C3%A1tica%2C+Lda!5e1!3m2!1spt-PT!2spt!4v1429956174252',
-          "width": 1280,
-          "height": 480,
-          "opts": { perspective: { radius: 1640, extraTransforms: "rotateY(-45deg) translateY(70px)" } }
-        },
-        {
-          "type": "image",
-          "yaw": -90 * Math.PI / 180,
-          "pitch": -0 * Math.PI / 180,
-          "title": "KANB",
-          "src": './data/kanb.png',
-          "width": 1200,
-          "height": 750
         }
       ]
     }

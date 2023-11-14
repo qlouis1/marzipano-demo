@@ -34,9 +34,13 @@
         var p = "";
         p += '<ul class="scenes">';
         var data = window.APP_DATA;
-        var link = '<a href="javascript:void(0)" class="scene" data-id="%s"><li class="text">%s</li>';
+        var link = '<a href="javascript:void(0)" class="scene" data-id="elem_id"><li class="text">elem_name</li>';
         data.scenes.forEach(element => {
-            p += link.replace(/%s/g, element.id);
+            var m = {
+                elem_id: element.id,
+                elem_name: element.name
+            }
+            p += link.replace(/elem_id|elem_name/gi, function (elem) { return m[elem] });
         });
         p += '</ul>';
 
