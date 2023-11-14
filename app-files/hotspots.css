@@ -62,3 +62,27 @@
 .html-hotspot ul {
     font-size: 3em;
 }
+
+.iframe-hotspot {
+    width: 2500px;
+    height: 1500px;
+    padding: 0;
+    overflow: hidden;
+}
+
+#iframe-test {
+    --zoom: 4;
+    zoom: var(--zoom);
+    -moz-transform: scale(var(--zoom));
+    -moz-transform-origin: 0 0;
+    -o-transform: scale(var(--zoom));
+    -o-transform-origin: 0 0;
+    -webkit-transform: scale(var(--zoom));
+    -webkit-transform-origin: center;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    #iframe-test {
+        zoom: 1;
+    }
+}

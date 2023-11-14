@@ -160,23 +160,23 @@ var APP_DATA = {
         },
         {
           "type": "iframe",
-          "yaw": -167 * Math.PI / 180,
+          "yaw": -150 * Math.PI / 180,
           "pitch": -15 * Math.PI / 180,
-          "title": "GMAPS",
-          "src": 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9487.563699358636!2d-9.211273541013671!3d38.69789785451112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1ecf578f4d20e9%3A0x530952e38d140ae6!2sDigisfera+-+Fotografia+e+Inform%C3%A1tica%2C+Lda!5e1!3m2!1spt-PT!2spt!4v1429956174252',
-          "width": 1280,
-          "height": 480,
+          "title": "iframe-test",
+          "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1528.0165113657538!2d-1.6815763692668126!3d48.11492064425415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x480ede30d8ac6d3b%3A0x412ac7a3e6d2c082!2sLe%20Couvent%20des%20Jacobins%20-%20Centre%20des%20Congr%C3%A8s%20de%20Rennes%20M%C3%A9tropole!5e1!3m2!1sfr!2sfr!4v1699959374580!5m2!1sfr!2sfr",
+          "width": 2000,
+          "height": 1000,
           "opts": { perspective: { radius: 1640, extraTransforms: "rotateX(5deg)" } }
         },
         {
           "type": "html",
-          "yaw": -167 * Math.PI / 180,
+          "yaw": -150 * Math.PI / 180,
           "pitch": -15 * Math.PI / 180,
           "width": 10,
           "height": 10,
           "content": "<div><h1> App externe</h1></div>",
           "class": "font-size-7",
-          "opts": { perspective: { radius: 1640, extraTransforms: "translateY(-360px) translateX(-500px)" } }
+          "opts": { perspective: { radius: 1640, extraTransforms: "translateY(-850px) translateX(-850px)" } }
         },
         {
           "type": "image",
