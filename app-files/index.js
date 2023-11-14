@@ -224,7 +224,8 @@
       var wrapper = document.createElement('div');
       wrapper.classList.add('hotspot');
       wrapper.classList.add('html-hotspot');
-      wrapper.style = "height: " + hotspot.height + "px; width: " +hotspot.width + "px;"
+      if (hotspot.class) { wrapper.classList.add(hotspot.class); }
+      wrapper.style = "height: " + hotspot.height + "px; width: " + hotspot.width + "px;"
       var content = document.createRange().createContextualFragment(hotspot.content);
       wrapper.appendChild(content);
 

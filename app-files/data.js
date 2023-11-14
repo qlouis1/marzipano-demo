@@ -76,6 +76,7 @@ var APP_DATA = {
           "pitch": 10 * Math.PI / 180,
           "width": 500,
           "height": 500,
+          "class": "lightblue",
           "content": "<div><h1> HTML pur</h1><ul><li> hotspot en html pur</li><li>défini dans le code js</li><li>style dans un .css</li></ul></p></div>",
           "opts": { perspective: { radius: 1200 } }
         }
@@ -108,10 +109,20 @@ var APP_DATA = {
       "hotspots": [
         {
           "type": "link",
-          "yaw": 2.3370201965853212,
-          "pitch": 0.06579998974241619,
+          "yaw": 123 * Math.PI / 180,
+          "pitch": 2 * Math.PI / 180,
           "rotation": 0,
           "target": "01-outside"
+        },
+        {
+          "type": "html",
+          "yaw": 123 * Math.PI / 180,
+          "pitch": 2 * Math.PI / 180,
+          "width": 10,
+          "height": 10,
+          "class": "font-size-3",
+          "content": "<div><h1>Navigation</h1></div>",
+          "opts": { perspective: { extraTransforms: "translateY(-65px)" } }
         },
         {
           "type": "link",
@@ -121,26 +132,73 @@ var APP_DATA = {
           "target": "03-exhibition"
         },
         {
-          "type": "link",
-          "yaw": -1.779546890430126,
-          "pitch": 0.09374289887150056,
-          "rotation": 4.71238898038469,
-          "target": "05-void_bottom"
-        },
-        {
-          "type": "link",
-          "yaw": -11 * Math.PI / 180,
-          "pitch": 3 * Math.PI / 180,
-          "rotation": 0,
-          "target": "09-seminar"
+          "type": "html",
+          "yaw": -1.401944445047718,
+          "pitch": 0.03735000572677549,
+          "width": 10,
+          "height": 10,
+          "class": "font-size-3",
+          "content": "<div><h1>Navigation</h1></div>",
+          "opts": { perspective: { extraTransforms: "translateY(-65px)" } }
         },
         {
           "type": "info",
           "yaw": 1.5013264737525382,
           "pitch": 0.24071713381517768,
-          "title": "02_reception_hotspot",
-          "text": "<div>02_reception_hotspot</div>"
-        }
+          "title": "Cliquez !",
+          "text": "<div><h1> Hotspot déroulant.</h1><p>Le contenu peut être n'importe quel contenu html: texte,image,lien...</div>"
+        },
+        {
+          "type": "html",
+          "yaw": 1.5013264737525382,
+          "pitch": 0.24071713381517768,
+          "width": 10,
+          "height": 10,
+          "class": "font-size-3",
+          "content": "<div><h1>Info</h1></div>",
+          "opts": { perspective: { extraTransforms: "translateY(-65px)" } }
+        },
+        {
+          "type": "iframe",
+          "yaw": -167 * Math.PI / 180,
+          "pitch": -15 * Math.PI / 180,
+          "title": "GMAPS",
+          "src": 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9487.563699358636!2d-9.211273541013671!3d38.69789785451112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1ecf578f4d20e9%3A0x530952e38d140ae6!2sDigisfera+-+Fotografia+e+Inform%C3%A1tica%2C+Lda!5e1!3m2!1spt-PT!2spt!4v1429956174252',
+          "width": 1280,
+          "height": 480,
+          "opts": { perspective: { radius: 1640, extraTransforms: "rotateX(5deg)" } }
+        },
+        {
+          "type": "html",
+          "yaw": -167 * Math.PI / 180,
+          "pitch": -15 * Math.PI / 180,
+          "width": 10,
+          "height": 10,
+          "content": "<div><h1> App externe</h1></div>",
+          "class": "font-size-7",
+          "opts": { perspective: { radius: 1640, extraTransforms: "translateY(-360px) translateX(-500px)" } }
+        },
+        {
+          "type": "image",
+          "yaw": -45 * Math.PI / 180,
+          "pitch": -20 * Math.PI / 180,
+          "title": "logo",
+          "src": './data/logo.png',
+          "width": 500,
+          "height": 150,
+          "a": "https://www.jres.org/",
+          "opts": { perspective: { radius: 1640, extraTransforms: "rotateZ(6deg)" } }
+        },
+        {
+          "type": "html",
+          "yaw": -45 * Math.PI / 180,
+          "pitch": -20 * Math.PI / 180,
+          "width": 10,
+          "height": 10,
+          "content": "<div><h1>Image (lien)</h1></div>",
+          "class": "font-size-7",
+          "opts": { perspective: { radius: 1640, extraTransforms: "rotateZ(6deg) translateY(-200px) translateX(-250px)" } }
+        },
       ]
     },
     {

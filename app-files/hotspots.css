@@ -1,15 +1,64 @@
-.html-hotspot {
+.html-hotspot.lightblue {
     background-color: lightblue;
     border-radius: 20px;
     padding: 20px;
     color: black;
-  }
-  
-  .html-hotspot h1 {
-    font-size: 4em;
-  }
-  
-  .html-hotspot p,
-  .html-hotspot ul {
+}
+
+.html-hotspot.font-size-3 {
     font-size: 3em;
-  }
+}
+
+.html-hotspot.font-size-3 h1 {
+    font-weight: bolder;
+    -webkit-text-stroke: 3px black;
+    color: white;
+    text-shadow:
+        3px 3px 0 #000,
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+}
+
+.html-hotspot.font-size-5 {
+    font-size: 5em;
+}
+
+.html-hotspot.font-size-5 h1 {
+    font-weight: bolder;
+    -webkit-text-stroke: 5px black;
+    color: white;
+    text-shadow:
+        5px 5px 0 #000,
+        -3px -3px 0 #000,
+        3px -3px 0 #000,
+        -3px 3px 0 #000,
+        3px 3px 0 #000;
+}
+
+.html-hotspot.font-size-7 {
+    font-size: 7em;
+}
+
+.html-hotspot.font-size-7 h1 {
+    font-weight: bolder;
+    -webkit-text-stroke: 7px black;
+    color: white;
+    text-shadow:
+        7px 7px 0 #000,
+        -5px -5px 0 #000,
+        5px -5px 0 #000,
+        -5px 5px 0 #000,
+        5px 5px 0 #000;
+}
+
+.html-hotspot h1 {
+    white-space: nowrap;
+
+}
+
+.html-hotspot p,
+.html-hotspot ul {
+    font-size: 3em;
+}
